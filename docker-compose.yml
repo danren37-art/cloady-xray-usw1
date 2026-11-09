@@ -1,0 +1,9 @@
+services:
+  xray:
+    build: .
+    ports:
+      - "3000:3000"
+    environment:
+      - UUID=${UUID}
+      - WS_PATH=${WS_PATH}
+    restart: unless-stopped
